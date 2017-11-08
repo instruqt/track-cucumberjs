@@ -7,9 +7,9 @@ rawResult=$(sed "s,$(printf '\033')\\[[0-9;]*[a-zA-Z],,g" <<< $result)
 passCheck="1 scenario (1 passed)"
 
 if [[ $rawResult == *$passCheck* ]]; then
-  echo "scenario correctly passes"
+  
 else
-  echo "scenario did not pass, try again"
+  echo "DIAG: Your scenario did not pass"
   exit 1
 fi
 
@@ -17,11 +17,10 @@ fi
     coverage=${BASH_REMATCH[1]}
 
 if [[ $coverage == 100 ]]; then
-  echo "PASS"
   exit 0
 else
-  echo "coverage is not 100"
+  echo "DIAG: Your scenario did not result in sufficient code coverage"
   exit 1
 fi
-# echo "US/Central -Statements   : 100%" |
-#    sed "s/\(Statements*\:*[0-9]*%\).*/\1/"
+
+exit 1

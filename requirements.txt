@@ -11,10 +11,3 @@ Voor XTA challenges is het volgende nog nodig in instruqt:
 
 onderaan backlog:
 - viewport, zodat je selenium en cypress testen kunt draaien en zien wat er gebeurd
-
-
-
-
-
-extra questions:
-- bij cleanup, wil je dat deze terugvalt op de door de gebruiker opgeloste staat van de vorige challenge, hoe?

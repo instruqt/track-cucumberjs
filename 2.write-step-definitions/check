@@ -7,7 +7,10 @@ rawResult=$(sed "s,$(printf '\033')\\[[0-9;]*[a-zA-Z],,g" <<< $result)
 passCheck="1 scenario (1 failed)"
 
 if [[ $rawResult == *$passCheck* ]]; then
-  echo "PASS"
+  exit 0
 else
-  echo "FAIL"
+  echo "DIAG: Cucumber did not result in to a failed scenario"
+  exit 1
 fi
+
+exit 1
