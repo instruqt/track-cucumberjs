@@ -7,5 +7,7 @@ configuration:
     - Exposed: true
       Name: shell
       Port: 8080
+    - Name: ssh
+      Port: 22
     Resources:
       Memory: 128
