@@ -1,0 +1,11 @@
+template: containers
+configuration:
+  Containers:
+  - Image: gcr.io/instruqt/shell:latest
+    Name: shell
+    Ports:
+    - Exposed: true
+      Name: shell
+      Port: 8080
+    Resources:
+      Memory: 128

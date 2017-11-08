@@ -1,0 +1,27 @@
+#!/bin/bash
+result=$(npm run cucumber)
+
+# removing color codes
+rawResult=$(sed "s,$(printf '\033')\\[[0-9;]*[a-zA-Z],,g" <<< $result)
+
+passCheck="1 scenario (1 passed)"
+
+if [[ $rawResult == *$passCheck* ]]; then
+  echo "scenario correctly passes"
+else
+  echo "scenario did not pass, try again"
+  exit 1
+fi
+
+[[ $rawResult =~ .*Statements.*:.(.*)% ]] &&
+    coverage=${BASH_REMATCH[1]}
+
+if [[ $coverage == 100 ]]; then
+  echo "PASS"
+  exit 0
+else
+  echo "coverage is not 100"
+  exit 1
+fi
+# echo "US/Central -Statements   : 100%" |
+#    sed "s/\(Statements*\:*[0-9]*%\).*/\1/"

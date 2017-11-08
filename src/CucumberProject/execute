@@ -1,0 +1,14 @@
+if [[ -n "$challenge" ]]; then
+  echo using $challenge
+else
+  echo specify challenge to start a script
+  exit 1
+fi
+
+if [[ -n "$script" ]]; then
+  echo running $script
+else
+  echo specify which script to run
+  exit 1
+fi
+(cd ./; ../cucumberjs/$challenge/$script)

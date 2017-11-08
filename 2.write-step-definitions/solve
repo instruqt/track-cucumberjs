@@ -1,0 +1,56 @@
+#!/bin/bash
+echo "var assert = require('chai').assert;
+
+module.exports = function() {
+  this.Given(/^the book '(.*)' is available$/, function (book) {
+    this.books.addBook(book)
+  });
+
+  this.When(/^I look for a book$/, function () {
+    this.result = this.books.findBooks()
+  });
+
+  this.Then(/^I should find '(.*)'$/, function (book) {
+    assert(this.result[0].title === book, 'expected ' + book + ', but found ' + this.result[0].title)
+  });
+};" > 'features/step_definitions/searching_books_steps.js'
+
+echo "/* SHARED OBJECTS */
+var Book = require('../../books');
+
+var myHooks = function () {
+  this.Before(function (scenario) {
+    this.books = new Book()
+  });
+
+  this.After(function (scenario) {
+    //
+  })
+};
+
+module.exports = myHooks;
+" > 'features/support/hooks.js'
+
+echo "Feature: searching for books
+  As a book reader
+  I want to be able to search for books
+  So that I can find my book
+
+  Scenario: looking for books
+    Given the book 'a serious journey' is available
+    When I look for a book
+    Then I should find 'a serious journey'" > 'features/searching_books.feature'
+
+echo "function Books(board) {
+  this.bookList = []
+
+  this.addBook = function(book) {
+    
+  }
+
+  this.findBooks = function() {
+    
+  }
+}
+
+module.exports = Books;" > 'books.js'

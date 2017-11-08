@@ -1,0 +1,113 @@
+slug: cucumberjs
+icon: https://cdn.instruqt.com/tracks/default.png
+title: cucumberjs
+teaser: Learn to automate your Gherkin scenarios
+description: |-
+  During this track you will learn how to work according to ATDD, Acceptance Test Driven Development.
+  You will start by writing a feature file that can be used to automate tests, 
+  then write step definitions as unit tests that bind your feature file to your code,
+  then write your actual production code.
+tags: []
+challenges:
+- slug: 1.specify-feature-file
+  credits: 10
+  title: specify feature file
+  teaser: Write a feature file that can be executed by cucumber js.
+  notes: []
+  assignment: |-
+    much information about good feature files.
+    running 'npm run cucumber'
+    goal: getting undefined result
+  difficulty: basic
+  timelimit: 900
+  points: 50
+  unlocks: []
+  tabs:
+    internal:
+    - type: terminal
+      title: Shell
+      name: shell
+      port: 80
+    - type: editor
+      title: feature file
+      name: feature file
+    - type: editor
+      title: package.json
+      name: package.json
+      option: read-only
+    external: []
+- slug: 2.write-step-definitions
+  credits: 10
+  title: write step definitions
+  teaser: write the step definitions to make the feature file executable
+  notes: []
+  assignment: |-
+    something about how to write step definitions
+  difficulty: basic
+  timelimit: 900
+  points: 50
+  unlocks: []
+  tabs:
+    internal:
+    - type: terminal
+      title: Shell
+      name: shell
+      port: 80
+    - type: editor
+      title: feature file
+      name: feature file
+    - type: editor
+      title: step definitions
+      name: step definitions
+    - type: editor
+      title: hooks
+      name: hooks
+    - type: editor
+      title: world
+      name: world
+      option: read-only
+    - type: editor
+      title: package.json
+      name: package.json
+      option: read-only
+    external: []
+- slug: 3.write-code
+  credits: 10
+  title: write the code
+  teaser: write the code to make the acceptance tests pass
+  notes: []
+  assignment: |-
+    example of the code, which you can copy paste to make the application work
+  difficulty: basic
+  timelimit: 900
+  points: 50
+  unlocks: []
+  tabs:
+    internal:
+    - type: terminal
+      title: Shell
+      name: shell
+      port: 80
+    - type: editor
+      title: feature file
+      name: feature file
+    - type: editor
+      title: step definitions
+      name: step definitions
+    - type: editor
+      title: hooks
+      name: hooks
+    - type: editor
+      title: books.js
+      name: books.js
+    - type: editor
+      title: world
+      name: world
+      option: read-only
+    - type: editor
+      title: package.json
+      name: package.json
+      option: read-only
+    external: []
+developers:
+- fkingma@xebia.com
