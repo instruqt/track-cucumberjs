@@ -1,7 +1,7 @@
 template: containers
 configuration:
   Containers:
-  - Image: gcr.io/instruqt/shell:latest
+  - Image: gcr.io/instruqt-staging/shell-node:latest
     Name: shell
     Ports:
     - Exposed: true
