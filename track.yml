@@ -28,13 +28,13 @@ challenges:
       title: Shell
       name: shell
       port: 80
-    - type: editor
-      title: feature file
-      name: feature file
-    - type: editor
-      title: package.json
-      name: package.json
-      option: read-only
+    # - type: editor
+    #   title: feature file
+    #   name: feature file
+    # - type: editor
+    #   title: package.json
+    #   name: package.json
+    #   option: read-only
     external: []
 - slug: 2.write-step-definitions
   credits: 10
@@ -53,23 +53,23 @@ challenges:
       title: Shell
       name: shell
       port: 80
-    - type: editor
-      title: feature file
-      name: feature file
-    - type: editor
-      title: step definitions
-      name: step definitions
-    - type: editor
-      title: hooks
-      name: hooks
-    - type: editor
-      title: world
-      name: world
-      option: read-only
-    - type: editor
-      title: package.json
-      name: package.json
-      option: read-only
+    # - type: editor
+    #   title: feature file
+    #   name: feature file
+    # - type: editor
+    #   title: step definitions
+    #   name: step definitions
+    # - type: editor
+    #   title: hooks
+    #   name: hooks
+    # - type: editor
+    #   title: world
+    #   name: world
+    #   option: read-only
+    # - type: editor
+    #   title: package.json
+    #   name: package.json
+    #   option: read-only
     external: []
 - slug: 3.write-code
   credits: 10
@@ -88,26 +88,26 @@ challenges:
       title: Shell
       name: shell
       port: 80
-    - type: editor
-      title: feature file
-      name: feature file
-    - type: editor
-      title: step definitions
-      name: step definitions
-    - type: editor
-      title: hooks
-      name: hooks
-    - type: editor
-      title: books.js
-      name: books.js
-    - type: editor
-      title: world
-      name: world
-      option: read-only
-    - type: editor
-      title: package.json
-      name: package.json
-      option: read-only
+    # - type: editor
+    #   title: feature file
+    #   name: feature file
+    # - type: editor
+    #   title: step definitions
+    #   name: step definitions
+    # - type: editor
+    #   title: hooks
+    #   name: hooks
+    # - type: editor
+    #   title: books.js
+    #   name: books.js
+    # - type: editor
+    #   title: world
+    #   name: world
+    #   option: read-only
+    # - type: editor
+    #   title: package.json
+    #   name: package.json
+    #   option: read-only
     external: []
 developers:
 - fkingma@xebia.com
