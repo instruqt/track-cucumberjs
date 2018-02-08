@@ -23,19 +23,17 @@ challenges:
   points: 50
   unlocks: []
   tabs:
-    internal:
     - type: terminal
       title: Shell
-      name: shell
+      hostname: shell
       port: 80
     # - type: editor
     #   title: feature file
-    #   name: feature file
+    #   hostname: feature file
     # - type: editor
     #   title: package.json
-    #   name: package.json
+    #   hostname: package.json
     #   option: read-only
-    external: []
 - slug: 2.write-step-definitions
   credits: 10
   title: write step definitions
@@ -48,10 +46,9 @@ challenges:
   points: 50
   unlocks: []
   tabs:
-    internal:
     - type: terminal
       title: Shell
-      name: shell
+      hostname: shell
       port: 80
     # - type: editor
     #   title: feature file
@@ -70,7 +67,6 @@ challenges:
     #   title: package.json
     #   name: package.json
     #   option: read-only
-    external: []
 - slug: 3.write-code
   credits: 10
   title: write the code
@@ -83,10 +79,9 @@ challenges:
   points: 50
   unlocks: []
   tabs:
-    internal:
     - type: terminal
       title: Shell
-      name: shell
+      hostname: shell
       port: 80
     # - type: editor
     #   title: feature file
@@ -108,6 +103,6 @@ challenges:
     #   title: package.json
     #   name: package.json
     #   option: read-only
-    external: []
+published: false
 developers:
 - fkingma@xebia.com
