@@ -4,10 +4,7 @@ configuration:
   - Image: gcr.io/instruqt-staging/shell-node:latest
     Name: shell
     Ports:
-    - Exposed: true
-      Name: shell
-      Port: 8080
-    - Name: ssh
-      Port: 22
+    - 8080
+    - 22
     Resources:
       Memory: 128
