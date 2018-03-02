@@ -1,0 +1,26 @@
+#!/bin/bash
+result=$(npm run cucumber)
+
+# removing color codes
+rawResult=$(sed "s,$(printf '\033')\\[[0-9;]*[a-zA-Z],,g" <<< $result)
+
+passCheck="1 scenario (1 passed)"
+
+if [[ $rawResult == *$passCheck* ]]; then
+  
+else
+  echo "DIAG: Your scenario did not pass"
+  exit 1
+fi
+
+[[ $rawResult =~ .*Statements.*:.(.*)% ]] &&
+    coverage=${BASH_REMATCH[1]}
+
+if [[ $coverage == 100 ]]; then
+  exit 0
+else
+  echo "DIAG: Your scenario did not result in sufficient code coverage"
+  exit 1
+fi
+
+exit 1

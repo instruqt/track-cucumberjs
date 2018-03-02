@@ -1,0 +1,63 @@
+#!/bin/bash
+mkdir -p features
+mkdir -p features/step_definitions
+mkdir -p features/support
+
+echo '{
+  "name": "Books",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "cucumber": "istanbul cover ./node_modules/.bin/cucumber-js"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "cucumber": "^0.10.4",
+    "istanbul": "^0.4.5"
+  }
+}
+' > 'package.json'
+
+echo "var assert = require('chai').assert;
+
+module.exports = function() {
+  
+};" > 'features/step_definitions/searching_books_steps.js'
+
+echo "/* SHARED OBJECTS */
+var Book = require('../../books');
+
+var myHooks = function () {
+  this.Before(function (scenario) {
+    //
+  });
+
+  this.After(function (scenario) {
+    //
+  })
+};
+
+module.exports = myHooks;
+" > 'features/support/hooks.js'
+
+echo "Feature: searching for books
+  As a book reader
+  I want to be able to search for books
+  So that I can find my book
+" > 'features/searching_books.feature'
+
+echo "function Books(board) {
+  this.bookList = []
+
+  this.addBook = function(book) {
+    
+  }
+
+  this.findBooks = function() {
+    
+  }
+}
+
+module.exports = Books;" > 'books.js'
+
+npm install

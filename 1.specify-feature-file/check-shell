@@ -1,0 +1,16 @@
+#!/bin/bash
+result=$(npm run cucumber)
+
+# removing color codes
+rawResult=$(sed "s,$(printf '\033')\\[[0-9;]*[a-zA-Z],,g" <<< $result)
+
+passCheck="1 scenario (1 undefined)"
+
+if [[ $rawResult == *$passCheck* ]]; then
+  exit 0
+else
+  echo "DIAG: Cucumber did not manage to run your scenario as undefined"
+  exit 1
+fi
+
+exit 1
