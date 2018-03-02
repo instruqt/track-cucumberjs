@@ -4,7 +4,7 @@ title: cucumberjs
 teaser: Learn to automate your Gherkin scenarios
 description: |-
   During this track you will learn how to work according to ATDD, Acceptance Test Driven Development.
-  You will start by writing a feature file that can be used to automate tests, 
+  You will start by writing a feature file that can be used to automate tests,
   then write step definitions as unit tests that bind your feature file to your code,
   then write your actual production code.
 tags: []
@@ -26,7 +26,6 @@ challenges:
     - type: terminal
       title: Shell
       hostname: shell
-      port: 80
     # - type: editor
     #   title: feature file
     #   hostname: feature file
@@ -49,7 +48,6 @@ challenges:
     - type: terminal
       title: Shell
       hostname: shell
-      port: 80
     # - type: editor
     #   title: feature file
     #   name: feature file
@@ -82,7 +80,6 @@ challenges:
     - type: terminal
       title: Shell
       hostname: shell
-      port: 80
     # - type: editor
     #   title: feature file
     #   name: feature file

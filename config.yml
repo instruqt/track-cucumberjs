@@ -1,7 +1,7 @@
 template: containers
 configuration:
   Containers:
-  - Image: gcr.io/instruqt-staging/shell-node:latest
+  - Image: node
     Name: shell
     Ports:
     - 8080
